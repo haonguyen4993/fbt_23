@@ -1,4 +1,13 @@
 en:
+  alert:
+    login_success: "Log in successfully. Welcome back #{name}!"
+    logout_success: "See you late!"
+    invalid_login: "Invalid Email or Password"
   layouts:
     application:
       tour: "Tour"
+  sessions:
+    new:
+      email: "Email address"
+      password: "Password"
+      login: "Log in"
