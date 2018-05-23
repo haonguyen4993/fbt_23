@@ -1,0 +1,35 @@
+<% content_for :head_decor do %>
+  <%= render "share/slider" %>
+<% end %>
+<!-- newest -->
+<div class="container-fluid">
+  <div class="tours popular-tour">
+    <div class="container">
+      <h2><%= t ".newest_tours" %></h2>
+      <p><%= t ".newest_description" %></p>
+      <div class="row">
+        <%= render partial: "tour_block", collection: @newest_tours, as: :tour %>
+        <div class="col-md-12">
+          <a href="#"><%= t ".seemore" %></a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h2><%= t ".recommended_tours" %></h2>
+      <p><%= t ".recommended_description" %></p>
+      <div class="row">
+        <%= render partial: "tour_block", collection: @recommended_tours, as: :tour %>
+      </div>
+    </div>
+    <div class="container">
+      <h2><%= t ".popular_tours" %></h2>
+      <p><%= t ".popular_description" %></p>
+      <div class="row">
+        <%= render partial: "tour_block", collection: @tours, as: :tour %>
+        <div class="col-md-12">
+          <a href="#"><%= t ".seemore" %></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

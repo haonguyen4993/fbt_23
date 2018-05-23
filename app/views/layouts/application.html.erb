@@ -9,6 +9,18 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header id="header">
+      <%= render "share/top_navigation" %>
+      <%= yield :head_decor %>
+    </header>
+    <%= yield :search_bar %>
+
+    <div id="main-body">
+      <%= yield %>
+    </div>
+
+    <footer id="footer">
+      <%= render "share/footer" %>
+    </footer>
   </body>
 </html>
