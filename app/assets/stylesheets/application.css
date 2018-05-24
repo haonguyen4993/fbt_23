@@ -12,4 +12,6 @@
  *
  *= require_self
  *= require styles
+ *= require login
+ *= require admin
  */

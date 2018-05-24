@@ -1,5 +1,9 @@
 class SessionsController < ApplicationController
-  def new; end
+  layout "login", only: :new
+
+  def new
+    redirect_to root_url if logged_in?
+  end
 
   def create
     user = User.find_by email: params[:session][:email].downcase

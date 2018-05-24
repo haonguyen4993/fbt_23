@@ -18,8 +18,21 @@
         <li><%= link_to t(".contact"), "#" %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to t(".login"), "#" %></li>
-        <li><%= link_to t(".signup"), "#" %></li>
+        <% unless logged_in? %>
+          <li><%= link_to t(".login"), login_path %></li>
+          <li><%= link_to t(".signup"), "#" %></li>
+        <% else %>
+          <li><span><%= t ".greeting", name: current_user.name %></span></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Booking history</a></li>
+              <li class="divider"></li>
+              <li><%= link_to t(".logout"), logout_path, method: :delete %></li>
+            </ul>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>
