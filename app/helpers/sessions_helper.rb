@@ -3,6 +3,14 @@ module SessionsHelper
     session[:user_id] = user.id
   end
 
+  def logged_in?
+    current_user.present?
+  end
+
+  def logged_in_as_admin?
+    logged_in? && @current_user.admin?
+  end
+
   def log_out
     session.delete :user_id
     @current_user = nil

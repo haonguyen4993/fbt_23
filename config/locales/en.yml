@@ -3,9 +3,13 @@ en:
     login_success: "Log in successfully. Welcome back #{name}!"
     logout_success: "See you late!"
     invalid_login: "Invalid Email or Password"
+    permision_denied: "Permission denied"
   layouts:
     application:
       tour: "Tour Booking"
+    admin:
+      application:
+        title: "Admin Panel"
   home_page:
     home:
       newest_tours: "Newest Tours"
@@ -35,3 +39,25 @@ en:
       signup_now: "Sign Up Now"
       signup_footer: "Sign up for more promotion"
       copyright_html: "Copyright&copy;2018"
+  admin:
+    share:
+      header:
+        admin_panel: "Admin Panel"
+        my_account: "My account"
+        profile: "Profile"
+        logout: "Log out"
+      sidebar:
+        bookings: "Bookings"
+        tours: "Tours"
+        users: "Users"
+        categories: "Categories"
+        statistics: "Statistics"
+  dashboard:
+    index:
+      recent_bookings: "Recent Bookings"
+      tour_name: "Tour name"
+      user_name: "User name"
+      booked_at: "Booked at"
+      status: "Status"
+      action: "Action"
+      view: "View"

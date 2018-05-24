@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       log_in user
       flash[:success] = t "alert.login_success", name: user.name
-      redirect_back_or root_url
+      check_admin user
     else
       flash[:danger] = t "alert.invalid_login"
       render :new
@@ -17,5 +17,11 @@ class SessionsController < ApplicationController
     log_out
     flash[:success] = t "alert.logout_success"
     redirect_to root_url
+  end
+
+  private
+
+  def check_admin user
+    user.admin? ? redirect_to(admin_root_url) : redirect_back_or(root_url)
   end
 end

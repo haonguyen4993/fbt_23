@@ -2,3 +2,5 @@ tour:
   limit_list: 3
   rating: 7
   recommended_limit: 6
+booking:
+  limit: 10

@@ -5,4 +5,6 @@ class User < ApplicationRecord
   has_many :likes
 
   has_secure_password
+
+  enum role: {admin: 1, customer: 0}
 end
