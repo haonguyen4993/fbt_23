@@ -5,9 +5,33 @@ en:
     invalid_login: "Invalid Email or Password"
   layouts:
     application:
+      tour: "Tour Booking"
+  home_page:
+    home:
+      newest_tours: "Newest Tours"
+      newest_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae eos beatae accusantium. Quia delectus error mollitia, expedita totam quo."
+      recommended_tours: "Recommended Tours"
+      recommended_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae eos beatae accusantium. Quia delectus error mollitia, expedita totam quo."
+      popular_tours: "Popular Tours"
+      popular_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae eos beatae accusantium. Quia delectus error mollitia, expedita totam quo."
+      rating: "Rating:"
+      seemore: "See more ..."
+  share:
+    top_navigation:
       tour: "Tour"
   sessions:
     new:
       email: "Email address"
       password: "Password"
       login: "Log in"
+      home: "Home"
+      about: "About"
+      contact: "Contact"
+      login: "Log in"
+      signup: "Sign up"
+    search:
+      search: "Search Tour"
+    footer:
+      signup_now: "Sign Up Now"
+      signup_footer: "Sign up for more promotion"
+      copyright_html: "Copyright&copy;2018"
