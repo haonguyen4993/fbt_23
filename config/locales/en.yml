@@ -10,6 +10,8 @@ en:
     admin:
       application:
         title: "Admin Panel"
+    login:
+      tour: "Tour"
   home_page:
     home:
       newest_tours: "Newest Tours"
@@ -23,6 +25,7 @@ en:
   share:
     top_navigation:
       tour: "Tour"
+      greeting: "Hi, %{name}"
   sessions:
     new:
       email: "Email address"
@@ -33,6 +36,7 @@ en:
       contact: "Contact"
       login: "Log in"
       signup: "Sign up"
+      dont_have_account: "Don't have an account yet?"
     search:
       search: "Search Tour"
     footer:
@@ -46,12 +50,26 @@ en:
         my_account: "My account"
         profile: "Profile"
         logout: "Log out"
+        goto_tour_page: "Goto Tour page"
       sidebar:
         bookings: "Bookings"
         tours: "Tours"
         users: "Users"
         categories: "Categories"
         statistics: "Statistics"
+    bookings:
+      index:
+        bookings_list: "Bookings List"
+        create: "Create a Booking"
+        tour_name: "Tour name"
+        user_name: "User name"
+        booked_at: "Booked at"
+        start_day: "Start day"
+        price: "Price"
+        status: "Status"
+        action: "Action"
+        view: "View"
+        edit: "Edit"
   dashboard:
     index:
       recent_bookings: "Recent Bookings"
