@@ -26,10 +26,12 @@ en:
       recommended_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae eos beatae accusantium. Quia delectus error mollitia, expedita totam quo."
       popular_tours: "Popular Tours"
       popular_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae eos beatae accusantium. Quia delectus error mollitia, expedita totam quo."
-      rating: "Rating:"
       seemore: "See more ..."
+    tour_block:
+      rating: "Rating: %{rating}"
   share:
     top_navigation:
+      home: "Home"
       tour: "Tour"
       greeting: "Hi, %{name}"
       home: "Home"
@@ -117,6 +119,15 @@ en:
       customer_review: "Customer reviews"
       content: "Content"
       rating: "Rating: %{rating}"
+    index:
+      alltours: "All Tours"
+      rating: "Rating: %{rating}"
+    newest:
+      newest_tours: "Newest Tours"
+  categories:
+    show:
+      rating: "Rating: %{rating}"
+      error_noti: "Category does not exist"
   histories:
     index:
       bookings_list: "Bookings List"

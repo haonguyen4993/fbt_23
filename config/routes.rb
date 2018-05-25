@@ -7,8 +7,9 @@ Rails.application.routes.draw do
 
   get "/history", to: "histories#index"
 
-  resources :tours, only: :show
+  resources :tours, only: %i(index show)
   resources :users, only: :show
+  resources :categories, only: :show
 
   namespace :admin do
     root "dashboard#index"
