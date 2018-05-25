@@ -1,0 +1,43 @@
+<% content_for :head_decor do %>
+  <%= render "share/banner" %>
+<% end %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-7 col-md-offset-2">
+      <div class="tour-info">
+        <div class="short-descrip">
+          <p><%= @tour.short_description %></p>
+          <span><%= t "home_page.home.rating" %> <%= @tour.rating %></span>
+        </div>
+        <div class="itinerary">
+          <h4><%= t ".itinerary" %></h4>
+          <p><%= @tour.itinerary %></p>
+        </div>
+        <div class="content">
+          <h4><%= t ".content" %></h4>
+          <p><%= @tour.content %></p>
+        </div>
+        <div class="tour-options">
+          <h4><%= t ".options" %></h4>
+          <%= render partial: "detail", collection: @description_details, as: :description_detail %>
+        </div>
+      </div>
+      <div class="tour-reviews">
+        <p><b><%= t ".customer_review" %></b></p>
+        <%= render @reviews %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="tour-suggest">
+        <span><b><%= t ".also_like" %></b></span>
+          <div class="row">
+          <%= render @tours %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
