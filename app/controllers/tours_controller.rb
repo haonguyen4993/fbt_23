@@ -11,7 +11,7 @@ class ToursController < ApplicationController
     if params[:filter] == Settings.tour.param_newest
       @tours = Tour.paginate(page: params[:page], per_page: Settings.tour.per_page).newest_tour
     else
-      @tours = Tour.paginate(page: params[:page], per_page: Settings.tour.per_page).name_sort
+      @tours = Tour.paginate(page: params[:page], per_page: Settings.tour.per_page).search_by_tour_name(params[:search])
     end
   end
 
