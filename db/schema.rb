@@ -13,12 +13,12 @@
 ActiveRecord::Schema.define(version: 20180530035546) do
 
   create_table "bookings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "status"
+    t.integer  "status",                           default: 0
     t.float    "price",                 limit: 24
     t.integer  "quantity"
     t.integer  "user_id"
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.integer  "description_detail_id"
     t.index ["description_detail_id"], name: "index_bookings_on_description_detail_id", using: :btree
     t.index ["user_id"], name: "index_bookings_on_user_id", using: :btree

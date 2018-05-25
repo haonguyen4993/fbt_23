@@ -168,3 +168,20 @@ en:
       review: "Review"
     review:
       ago: "%{time} ago"
+  bookings:
+    create:
+      successed: "Booked successfully. Please check your email!"
+      failed: "Quantity must be number, greater than 0 / can't be blank"
+    new:
+      booking_tour: "Booking Tour"
+      tour_name: "Tour`s name"
+      price: "Price"
+      start_day: "Start day"
+      end_day: "End day"
+      quantity: "Number of people"
+      book: "Book"
+      total: "Total"
+      danger_mess: "Tour detail does not exits"
+    mail:
+      hi: "Hi, %{name}"
+      noti_message: "Your tour has been successfully booked."
