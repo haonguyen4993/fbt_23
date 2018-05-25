@@ -50,6 +50,8 @@ en:
       logout: "Log out"
     search:
       search: "Search"
+    error_messages_detail:
+      error: "error"
   sessions:
     new:
       email: "Email address"
@@ -136,6 +138,74 @@ en:
         parent: "Parent category"
       category:
         delete: "Delete"
+    tours:
+      index:
+        tours_list: "Tours list"
+        create_tour: "Create a tour"
+        tour_name: "Tour name"
+        short_description: "Short description"
+        category_tour: "Category's tour"
+        itinerary: "Itinerary"
+        image: "Image"
+        action: "Action"
+      show:
+        tour_detail: "Tour details"
+        create_detail: "Create a tour detail"
+        tour_no: "Tour No #%{no}"
+        content: "Content"
+        rating: "Rating"
+      new:
+        create_tour: "Create tour"
+      form_tour:
+        name: "Tour name"
+        itinerary: "Itinerary"
+        short_description: "Short description"
+        content: "Content"
+        category: "Category"
+        image: "Image"
+        help_block: "(.jpg, .jpeg, .gif, .png)"
+        submit: "Submit"
+      create:
+        creat_success: "Created successfully"
+        error_id_tour: "Tour does not exist"
+      edit:
+        edit_tour: "Edit tour"
+      update:
+        tour_updated: "Tour updated"
+      destroy:
+        error_delete: "Can not delete this tour"
+        delete_success: "Deleted successfully"
+      tour:
+        view: "View"
+        edit: "Edit"
+        delete: "Delete"
+        make_sure: "Are you sure?"
+    description_details:
+      description_detail:
+        detail: "##Detail"
+        price: "Price"
+        start_day: "Start day"
+        end_day: "End day"
+        edit_tour_detail: "Edit tour detail"
+        delete: "Delete"
+        make_sure: "Are you sure?"
+      new:
+        create_detail: "Create detail"
+      edit:
+        edit_detail: "Edit detail"
+        error_detail_id: "Detail does not exist"
+      update:
+        detail_updated: "Detail Updated"
+      create:
+        create_success: "Created successfully"
+      destroy:
+        error_delete: "Can not delete this detail"
+        delete_success: "Deleted successfully"
+      form_detail:
+        price: "Price"
+        start_day: "Start day"
+        end_day: "End day"
+        submit: "Submit"
   dashboard:
     index:
       recent_bookings: "Recent Bookings"
@@ -209,6 +279,7 @@ en:
       end_day: "End day"
       quantity: "Number of people"
       book: "Book"
+
       total: "Total"
       danger_mess: "Tour detail does not exits"
     mail:
@@ -216,3 +287,5 @@ en:
       noti_message: "Your tour has been successfully booked."
       response_mail_content: "Your booking has been %{status}"
       have_a_nice_trip: "Have a nice trip!"
+  error_check_day: "Please enter the start date before the end date."
+  error_image_size: "should be less than 5MB"
