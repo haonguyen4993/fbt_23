@@ -9,7 +9,7 @@
     <span class="<%= booking.status %>"><%= booking.status %></span>
   </td>
   <td>
-    <%= link_to t(".view"), "#", class: "btn btn-info" %>
+    <%= link_to t(".view"), admin_booking_path(booking), class: "btn btn-info" %>
     <%= link_to t(".edit"), "#", class: "btn btn-default" %>
   </td>
 </tr>

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   namespace :admin do
     root "dashboard#index"
-    get "/bookings", to: "bookings#index"
+    resources :bookings, only: %i(index show update)
   end
   resources :tours, only: :show
 end

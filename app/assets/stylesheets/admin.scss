@@ -1,4 +1,4 @@
-.pending, .accept, .reject {
+.pending, .accepted, .rejected {
   display: inline-block;
   color: #333;
   text-align: center;
@@ -9,10 +9,10 @@
 .pending {
   background-color: #f0ad4e;
 }
-.accept {
+.accepted {
   background-color: #5cb85c;
 }
-.reject {
+.rejected {
   background-color: #d9534f;
 }
 .page-content > .row {
@@ -23,6 +23,17 @@
 
 .pull-right {
   float: right;
+}
+
+.show-booking {
+  h3 {
+    margin: 0;
+    display: inline-block;
+  }
+  a {
+      float: right;
+      margin-left: 10px;
+    }
 }
 
 /* Footer */
