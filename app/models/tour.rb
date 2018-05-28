@@ -6,4 +6,6 @@ class Tour < ApplicationRecord
   scope :name_sort, ->{order "name asc"}
   scope :newest_tour, ->{order "created_at desc"}
   scope :recommended_tour, ->{order "rating desc"}
+  scope :select_tour_by_category, ->(category_id){where category_id: category_id}
+  scope :except_id, ->(id){where.not id: id}
 end

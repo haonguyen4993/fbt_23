@@ -7,7 +7,7 @@
       <%= image_tag tour.image, class: "img-responsive" %>
     <% end %>
     <span class="rating"><%= t ".rating" %> <%= tour.rating %></span>
-    <h3 class="tour-name"><%= link_to tour.name, "#" %></h3>
+    <h3 class="tour-name"><%= link_to tour.name, tour %></h3>
     <p class="short-descrip">
       <%= tour.content %>
     </p>

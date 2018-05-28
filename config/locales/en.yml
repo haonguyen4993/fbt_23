@@ -79,3 +79,16 @@ en:
       status: "Status"
       action: "Action"
       view: "View"
+  tours:
+    show:
+      error_noti: "Tour does not exist"
+      itinerary: "Itinerary"
+      options: "Options"
+      tour_detail: "Tour detail"
+      book_tour: "Book Tour"
+      customer_review: "Customer reviews"
+      content: "Content"
+      rating: "Rating: %{rating}"
+  time:
+    formats:
+      date_month_year: "%d-%m-%y"

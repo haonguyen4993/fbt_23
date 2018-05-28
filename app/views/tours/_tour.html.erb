@@ -1,0 +1,10 @@
+<div class="col-sm-6 col-md-4">
+  <div class="thumbnail">
+    <%= image_tag "tour-1.jpg" %>
+    <div class="caption">
+      <h3><%= link_to tour.name, tour %></h3>
+      <p><%= t ".rating", rating: tour.rating %></p>
+      <p><%= tour.content %></p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h6 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <%= t ".tour_detail" %>
+        </a>
+      </h6>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        <p><strong><%= l description_detail.start_day, format: :date_month_year %></strong></p>
+        <p><strong><%= l description_detail.end_day, format: :date_month_year %></strong></p>
+        <p><strong>Price: <%= description_detail.price %>$</strong></p>
+        <a class="btn btn-default" href="#" role="button"><%= t ".book_tour" %></a>
+      </div>
+    </div>
+  </div>
+</div>
