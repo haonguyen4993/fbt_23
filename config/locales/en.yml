@@ -1,9 +1,13 @@
 en:
   alert:
-    login_success: "Log in successfully. Welcome back #{name}!"
+    login_success: "Log in successfully. Welcome back %{name}!"
     logout_success: "See you late!"
     invalid_login: "Invalid Email or Password"
-    permision_denied: "Permission denied"
+    permission_denied: "Permission denied"
+    booking_updated: "Booking has been updated"
+    booking_not_found: "Booking not found"
+    booking_expired: "This booking expired"
+    confirm: "Are you sure?"
   layouts:
     application:
       tour: "Tour Booking"
@@ -70,6 +74,21 @@ en:
         action: "Action"
         view: "View"
         edit: "Edit"
+      show:
+        booking_details: "Booking Details"
+        edit: "Edit"
+        approve: "Approve"
+        reject: "Reject"
+        booking_no: "Booking #%{no}"
+        customer_name: "Customer name"
+        tour_name: "Tour name"
+        booked_at: "Booked at"
+        start_day: "Start day"
+        end_day: "End day"
+        price: "Price"
+        quantity: "Number of booking"
+        total: "Total"
+        status: "Status"
   dashboard:
     index:
       recent_bookings: "Recent Bookings"
