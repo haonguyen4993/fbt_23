@@ -274,9 +274,9 @@ a {
 }
 
 .tour-info {
+  width: 70%;
   margin: 20px auto;
   padding-bottom: 15px;
-  border-bottom: 1px solid $brand-footer-color;
   .short-descrip {
     text-align: center;
     font-size: 16px;
@@ -301,9 +301,18 @@ a {
 }
 
 .tour-reviews {
+  .reviews {
+    margin-top: 30px;
+  }
   .review {
-    border-bottom: 1px solid $brand-gray;
     margin-bottom: 10px;
+    .ago {
+      font-size: 11px;
+      color: $brand-darker
+    }
+    p {
+      display: inline-block;
+    }
   }
 }
 
@@ -315,4 +324,9 @@ a {
       max-height: 190px;
     }
   }
+}
+
+#errors {
+  margin-top: 10px;
+  display: none;
 }

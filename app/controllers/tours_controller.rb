@@ -2,7 +2,9 @@ class ToursController < ApplicationController
   before_action :load_tour, only: :show
 
   def show
+    store_location
     @description_details = @tour.description_details
+    @review = Review.new
     @reviews = @tour.reviews
     @tours = Tour.select_tours_by_category(@tour.category_id).except_id params[:id]
   end

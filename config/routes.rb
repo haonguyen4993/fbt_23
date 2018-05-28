@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :tours, only: %i(index show)
   resources :users, only: :show
   resources :categories, only: :show
+  resources :reviews, only: :create
 
   namespace :admin do
     root "dashboard#index"
