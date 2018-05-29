@@ -1,7 +1,8 @@
-<nav id="top-nav" class="navbar navbar-default">
+<nav id="top-nav" class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -22,12 +23,15 @@
           <li><%= link_to t(".login"), login_path %></li>
           <li><%= link_to t(".signup"), "#" %></li>
         <% else %>
-          <li><span><%= t ".greeting", name: current_user.name %></span></li>
+          <li>
+            <span class="greeting"><%= t ".greeting", name: current_user.name %></span></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <%= t ".account" %><span class="caret"></span>
+            </a>
             <ul class="dropdown-menu">
-              <li><a href="#">Profile</a></li>
-              <li><a href="#">Booking history</a></li>
+              <li><%= link_to t(".profile"), current_user %></li>
+              <li><%= link_to t(".booking_history"), history_path %></li>
               <li class="divider"></li>
               <li><%= link_to t(".logout"), logout_path, method: :delete %></li>
             </ul>

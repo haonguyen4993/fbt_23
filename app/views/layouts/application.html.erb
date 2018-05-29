@@ -16,7 +16,11 @@
     <%= yield :search_bar %>
 
     <div id="main-body">
-      <%= render "share/alert" %>
+      <div class="container">
+        <div class="col-md-6 col-offset-3">
+          <%= render "share/alert" %>
+        </div>
+      </div>
       <%= yield %>
     </div>
 
