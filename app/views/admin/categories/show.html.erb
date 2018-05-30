@@ -3,7 +3,7 @@
     <div class="page-header show-booking">
       <h3><%= @category.name %></h3>
       <span><%= t ".list_tours" %></span>
-      <%= link_to t(".create_new_tour"), "#", class: "btn btn-success" %>
+      <%= link_to t(".create_new_tour"), new_admin_tour_path(cid: @category.id), class: "btn btn-success" %>
     </div>
   </div>
 
@@ -13,9 +13,11 @@
         <tr>
           <th>#</th>
           <th><%= t ".tour_name" %></th>
-          <th><%= t ".created_at" %></th>
-          <th><%= t ".rating" %></th>
-          <th><%= t ".action" %></th>
+          <th><%= t ".short_description" %></th>
+          <th><%= t ".category_tour" %></th>
+          <th><%= t ".itinerary" %></th>
+          <th class="col-md-2"><%= t ".image" %></th>
+          <th class="col-md-3"><%= t ".action" %></th>
         </tr>
       </thead>
       <tbody>

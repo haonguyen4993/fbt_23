@@ -2,7 +2,7 @@ tour:
   limit_list: 3
   rating: 7
   recommended_limit: 6
-  per_page: 5
+  per_page: 6
   param_newest: "newest"
   short_descrip: 50
   length_short_des: 100

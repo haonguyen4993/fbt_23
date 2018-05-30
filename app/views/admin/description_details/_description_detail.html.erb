@@ -1,13 +1,13 @@
 <thead>
   <tr>
-    <th colspan="2"><%= t ".detail" %>
-      <%= link_to t(".edit_tour_detail"),
-        edit_admin_tour_description_detail_path(description_detail),
-        class: "btn btn-primary" %>
+    <th colspan="2"><%= t ".detail", id: description_detail.id %>
       <%= link_to t(".delete"),
-        admin_tour_description_detail_path(description_detail.id),
+        admin_tour_description_detail_path(description_detail.tour_id, description_detail.id),
         method: :delete, data: { confirm: t(".make_sure") },
-        class: "btn btn-primary pull-right" %>
+        class: "btn btn-danger pull-right" %>
+      <%= link_to t(".edit_tour_detail"),
+        edit_admin_tour_description_detail_path(description_detail.tour_id, description_detail),
+        class: "btn btn-default pull-right" %>
     </th>
   </tr>
 </thead>

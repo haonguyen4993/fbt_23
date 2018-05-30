@@ -131,6 +131,12 @@ en:
       show:
         list_tours: "List tours"
         create_new_tour: "Create New Tour"
+        tour_name: "Tour name"
+        short_description: "Short description"
+        category_tour: "Category"
+        itinerary: "Itinerary"
+        image: "Image"
+        action: "Action"
       form:
         save_category: "Save Category"
         name: "Category name"
@@ -144,7 +150,7 @@ en:
         create_tour: "Create a tour"
         tour_name: "Tour name"
         short_description: "Short description"
-        category_tour: "Category's tour"
+        category_tour: "Category"
         itinerary: "Itinerary"
         image: "Image"
         action: "Action"
@@ -182,7 +188,7 @@ en:
         make_sure: "Are you sure?"
     description_details:
       description_detail:
-        detail: "##Detail"
+        detail: "Detail #%{id}"
         price: "Price"
         start_day: "Start day"
         end_day: "End day"

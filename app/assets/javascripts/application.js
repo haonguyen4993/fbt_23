@@ -14,3 +14,7 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
+
+var menuItemClick = function(a){
+  location.href = $(a).attr("href");
+};

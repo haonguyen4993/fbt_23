@@ -1,0 +1,12 @@
+<% if category.childs.any? %>
+  <li class="dropdown">
+    <%= link_to category, class: "dropdown-toggle", onclick: "menuItemClick(this)", data: {toggle: "dropdown", hover: "dropdown"} do %>
+      <%= category.name %><span class="caret"></span>
+    <% end %>
+    <ul class="dropdown-menu">
+      <%= render partial: "share/submenu", collection: category.childs, as: :category %>
+    </ul>
+  </li>
+<% else %>
+  <li><%= link_to category.name, category %></li>
+<% end %>

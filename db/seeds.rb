@@ -18,27 +18,29 @@ Category.create!([
 ])
 
 Tour.delete_all
-10.times{
+13.times do |n|
+  image = File.open(File.join(Rails.root, "app/assets/images/tours/tour-#{n+1}.jpg"))
   Tour.create!(
-    name: Faker::LeagueOfLegends.masteries,
+    name: Faker::Coffee.blend_name,
     rating: Faker::Number.between(1, 10),
     short_description: Faker::Lorem.sentence,
-    image: "",
+    image: image,
     itinerary: Faker::Lorem.sentence,
-    content: Faker::Lorem.paragraphs,
+    content: Faker::Lorem.paragraph,
     category_id: Faker::Number.between(1, 15)
   )
-}
+end
 
 DescriptionDetail.delete_all
-10.times{
+30.times do
+  day = Faker::Date.forward(10)
   DescriptionDetail.create!(
     price: Faker::Number.decimal(2),
-    start_day: Faker::Date.backward(14) ,
-    end_day: Faker::Date.forward(23),
-    tour_id: Faker::Number.between(1, 10)
+    start_day: day ,
+    end_day: day + 5.days,
+    tour_id: Faker::Number.between(1, 13)
   )
-}
+end
 
 User.delete_all
 10.times do |n|
@@ -54,7 +56,7 @@ User.delete_all
 end
 
 Booking.delete_all
-10.times{
+30.times{
   Booking.create!(
     status: 0,
     price: Faker::Number.decimal(2),
@@ -65,7 +67,7 @@ Booking.delete_all
 }
 
 Review.delete_all
-20.times{
+50.times{
   Review.create!(
     content: Faker::Lorem.paragraph,
     user_id: Faker::Number.between(1, 10),

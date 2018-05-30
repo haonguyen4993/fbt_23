@@ -3,7 +3,7 @@ module Admin
     before_action :load_category, only: %i(show destroy)
 
     def index
-      @categories = Category.all
+      @categories = Category.available
       @category = Category.new
     end
 
@@ -24,9 +24,10 @@ module Admin
       case
       when @category.childs.any?
         flash[:danger] = t "alert.has_subcategories"
-      when Category.booking_by_id_and_status(@category.id, "pending").any?
+      when Category.booking_by_id_and_status(@category.id, Booking.statuses[:pending]).any?
         flash[:danger] = t "alert.has_pending"
       when @category.tours.any?
+        @category.delete_tours
         @category.toggle! :deleted
         flash[:success] = t "alert.delete_category_success"
       else

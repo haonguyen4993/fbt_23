@@ -14,7 +14,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav main-menu">
         <li><%= link_to t(".home"), root_path %></a></li>
-        <%= draw_categories(@super_categories).html_safe %>
+        <%= render partial: "share/submenu", collection: @super_categories, as: :category %>
         <li><%= link_to t(".about"), "#" %></li>
         <li><%= link_to t(".contact"), "#" %></li>
       </ul>
@@ -30,7 +30,6 @@
               <%= t ".account" %><span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to t(".profile"), current_user %></li>
               <li><%= link_to t(".booking_history"), history_path %></li>
               <li class="divider"></li>
               <li><%= link_to t(".logout"), logout_path, method: :delete %></li>

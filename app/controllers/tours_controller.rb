@@ -21,7 +21,7 @@ class ToursController < ApplicationController
   private
 
   def load_tour
-    @tour = Tour.find_by id: params[:id]
+    @tour = Tour.available.find_by id: params[:id]
     return if @tour
     flash[:danger] = t ".error_noti"
     redirect_to root_url

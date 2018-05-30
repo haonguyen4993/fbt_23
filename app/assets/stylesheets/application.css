@@ -14,4 +14,6 @@
  *= require styles
  *= require login
  *= require admin
+ *= require animate.min
+ *= require bootstrap-dropdownhover.min
  */

@@ -12,4 +12,11 @@ class Category < ApplicationRecord
     joins(tours: {description_details: :bookings})
       .where "categories.id = ? AND bookings.status = ?", id, status
   end
+
+  def delete_tours
+    tours.available.each do |tour|
+      tour.delete_details
+    end
+    tours.available.update_all(deleted: true)
+  end
 end

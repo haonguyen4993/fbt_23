@@ -2,8 +2,8 @@
   <div class="panel-heading">
     <div class="page-header show-booking">
       <h3><%= t ".tour_detail" %></h3>
+      <%= link_to t(".create_detail"), new_admin_tour_description_detail_path(@tour), class: "btn btn-primary" %>
     </div>
-    <%= link_to t(".create_detail"), new_admin_tour_description_detail_path(@tour), class: "btn btn-primary pull-right" %>
   </div>
 
   <div class="panel-body">

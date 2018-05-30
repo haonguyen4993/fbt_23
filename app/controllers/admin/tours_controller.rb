@@ -13,6 +13,7 @@ module Admin
 
     def new
       @tour = Tour.new
+      @default_category_id = params[:cid]
     end
 
     def create
@@ -25,7 +26,9 @@ module Admin
       end
     end
 
-    def edit; end
+    def edit
+      @default_category_id = @tour.category_id
+    end
 
     def update
       if @tour.update_attributes tour_params
@@ -54,14 +57,14 @@ module Admin
     end
 
     def load_tour
-      @tour = Tour.find_by id: params[:id]
+      @tour = Tour.available.find_by id: params[:id]
       return if @tour
       flash[:danger] = t ".error_id_tour"
       redirect_to admin_tours_url
     end
 
     def load_categories
-      @categories = Category.all
+      @categories = Category.available
     end
   end
 end

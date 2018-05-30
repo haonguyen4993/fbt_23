@@ -20,6 +20,6 @@ class DescriptionDetail < ApplicationRecord
   end
 
   def pending_booking? id
-    DescriptionDetail.joins(:bookings).check_pending_booking(id, :pending).any?
+    DescriptionDetail.joins(:bookings).check_pending_booking(id, Booking.statuses[:pending]).any?
   end
 end

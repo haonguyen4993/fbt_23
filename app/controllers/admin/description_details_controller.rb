@@ -49,14 +49,17 @@ module Admin
     end
 
     def load_description_detail
-      @description_detail = DescriptionDetail.find_by id: params[:id]
+      @description_detail = DescriptionDetail.available.find_by id: params[:id]
       return if @description_detail
       flash[:danger] = t ".error_detail_id"
       redirect_to admin_tours_url
     end
 
     def load_tour
-      @tour = Tour.find_by id: params[:tour_id]
+      @tour = Tour.available.find_by id: params[:id]
+      return if @tour
+      flash[:danger] = t ".error_id_tour"
+      redirect_to admin_tours_url
     end
   end
 end

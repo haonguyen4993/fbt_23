@@ -1,7 +1,7 @@
 <div class="col-md-4">
   <div class="tour">
     <%= link_to tour do %>
-      <%= image_tag "tour-1.jpg", class: "img-responsive" %>
+      <%= image_tag tour.image, class: "img-responsive" %>
     <% end %>
     <span class="rating">
       <input type="hidden" class="rating" value="<%= tour.rating %>" data-readonly >
