@@ -5,10 +5,16 @@
   <div class="tours popular-tour">
     <div class="container">
       <h2><%= t ".alltours" %></h2>
+      <% if @tours.blank?  %>
+        <div class="row">
+          <%= t ".no_result" %>
+        </div>
+      <% else %>
       <%= will_paginate @tours %>
-      <div class="row">
-      <%= render @tours %>
-      </div>
+        <div class="row">
+          <%= render @tours %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

@@ -41,6 +41,8 @@ en:
       profile: "Profile"
       booking_history: "Booking history"
       logout: "Log out"
+    search:
+      search: "Search"
   sessions:
     new:
       email: "Email address"
@@ -122,6 +124,7 @@ en:
     index:
       alltours: "All Tours"
       rating: "Rating: %{rating}"
+      no_result: "No result"
     newest:
       newest_tours: "Newest Tours"
   categories:
