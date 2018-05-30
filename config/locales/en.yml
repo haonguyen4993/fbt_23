@@ -27,7 +27,6 @@ en:
       popular_tours: "Popular Tours"
       popular_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae eos beatae accusantium. Quia delectus error mollitia, expedita totam quo."
       seemore: "See more ..."
-    tour_block:
       rating: "Rating: %{rating}"
   share:
     top_navigation:
@@ -121,12 +120,16 @@ en:
       customer_review: "Customer reviews"
       content: "Content"
       rating: "Rating: %{rating}"
+      also_like: "You may also like"
     index:
       alltours: "All Tours"
       rating: "Rating: %{rating}"
       no_result: "No result"
     newest:
       newest_tours: "Newest Tours"
+    detail:
+      tour_detail: "Tour detail"
+      book_tour: "Book tour"
   categories:
     show:
       rating: "Rating: %{rating}"
@@ -148,3 +151,9 @@ en:
   time:
     formats:
       date_month_year: "%d-%m-%y"
+  reviews:
+    form:
+      leave_review: "Leave review"
+      review: "Review"
+    review:
+      ago: "%{time} ago"
