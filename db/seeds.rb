@@ -1,3 +1,4 @@
+Category.delete_all
 Category.create!([
   {name: "Vietnam Tour", description: Faker::Lorem.sentence},
   {name: "World Tour", description: Faker::Lorem.sentence},
@@ -6,7 +7,7 @@ Category.create!([
   {name: "Central Vietnam", description: Faker::Lorem.sentence, parent_id: 1},
   {name: "Europe", description: Faker::Lorem.sentence, parent_id: 2},
   {name: "Asian", description: Faker::Lorem.sentence, parent_id: 2},
-  {name: "Europe", description: Faker::Lorem.sentence, parent_id: 2},
+  {name: "Califonia", description: Faker::Lorem.sentence, parent_id: 2},
   {name: "Ha Noi", description: Faker::Lorem.sentence, parent_id: 3},
   {name: "Ho Chi Minh", description: Faker::Lorem.sentence, parent_id: 4},
   {name: "Da Nang", description: Faker::Lorem.sentence, parent_id: 5},
@@ -16,17 +17,20 @@ Category.create!([
   {name: "Japan", description: Faker::Lorem.sentence, parent_id: 7}
 ])
 
+Tour.delete_all
 10.times{
   Tour.create!(
-    name: Faker::Lorem.word,
+    name: Faker::LeagueOfLegends.masteries,
     rating: Faker::Number.between(1, 10),
+    short_description: Faker::Lorem.sentence,
     image: "",
-    itinerary: "",
-    content: Faker::Lorem.sentence,
+    itinerary: Faker::Lorem.sentence,
+    content: Faker::Lorem.paragraphs,
     category_id: Faker::Number.between(1, 15)
   )
 }
 
+DescriptionDetail.delete_all
 10.times{
   DescriptionDetail.create!(
     price: Faker::Number.decimal(2),
@@ -36,6 +40,7 @@ Category.create!([
   )
 }
 
+User.delete_all
 10.times do |n|
   User.create!(
     name: Faker::Name.name,
@@ -48,9 +53,10 @@ Category.create!([
   )
 end
 
+Booking.delete_all
 10.times{
   Booking.create!(
-    status: "Approved",
+    status: 0,
     price: Faker::Number.decimal(2),
     quantity: Faker::Number.between(1, 5),
     user_id: Faker::Number.between(1, 10),
@@ -58,7 +64,8 @@ end
   )
 }
 
-3.times{
+Review.delete_all
+20.times{
   Review.create!(
     content: Faker::Lorem.paragraph,
     user_id: Faker::Number.between(1, 10),
@@ -66,10 +73,20 @@ end
   )
 }
 
-3.times{
+Comment.delete_all
+40.times{
   Comment.create!(
     content: Faker::Lorem.paragraph,
     user_id: Faker::Number.between(1, 10),
     review_id: Faker::Number.between(1, 3)
   )
 }
+
+Rating.delete_all
+10.times do |n|
+  Rating.create!(
+    user_id: n+1,
+    tour_id: Faker::Number.between(1, 10),
+    point: Faker::Number.between(1, 10)
+  )
+end

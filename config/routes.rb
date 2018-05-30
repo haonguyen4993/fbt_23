@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :users, only: :show
   resources :categories, only: :show
   resources :reviews, only: :create
+  resources :ratings, only: %i(create update)
 
   namespace :admin do
     root "dashboard#index"

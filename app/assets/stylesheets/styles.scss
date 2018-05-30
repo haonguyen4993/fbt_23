@@ -98,7 +98,7 @@ a {
 
 #search {
   background: $brand-footer-color;
-  padding: 30px 60px;
+  padding: 20px 30px;
   .search-form {
     width: 80%;
     margin: 0 auto;
@@ -108,6 +108,7 @@ a {
     }
     .form-control {
       font-size: 16px;
+      color: $brand-white;
     }
     .btn-search {
       background: $brand-yellow;
@@ -120,8 +121,10 @@ a {
 }
 
 #main-body {
-  margin-top: 50px;
   margin-bottom: 30px;
+  .alert {
+    margin: 10px auto;
+  }
 }
 
 .tours {
@@ -145,6 +148,8 @@ a {
   .tour {
     position: relative;
     margin-bottom: 10px;
+    background: $brand-white;
+    padding: 10px;
     img {
       width: 100%;
       height: 250px;
@@ -283,14 +288,14 @@ a {
     margin-bottom: 20px;
     color: $brand-darker;
     span {
-      color: $brand-overlay-color;
-      font-weight: bold;
+      color: $brand-secondary;
+      font-size: 25px;
     }
   }
   h4 {
-    font-size: 22px;
+    font-size: 25px;
     font-weight: 600;
-    color: $brand-secondary;
+    color: $brand-footer-color;
     letter-spacing: 1.5px;
   }
   .itinerary, .content {
@@ -324,9 +329,43 @@ a {
       max-height: 190px;
     }
   }
+  .tour {
+    margin: 10px 15px;
+    padding: 10px;
+    background: $brand-white;
+    border-radius: 5px;
+  }
 }
 
 #errors {
   margin-top: 10px;
   display: none;
+}
+.symbol {
+  display: inline-block;
+  border-radius: 50%;
+  border: 5px double white;
+  width: 30px;
+  height: 30px;
+}
+
+.symbol-empty {
+  background-color: #ccc;
+}
+
+.rating-symbol-foreground {
+  color: $brand-secondary;
+}
+
+.rating {
+  font-size: 20px;
+  color: $brand-secondary;
+}
+.new_rating, .edit_rating {
+  font-size: 22px;
+  text-align: center;
+}
+
+.booking-history {
+  margin-top: 30px;
 }

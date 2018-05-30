@@ -4,9 +4,9 @@ class ToursController < ApplicationController
   def show
     store_location
     @description_details = @tour.description_details
-    @review = Review.new
     @reviews = @tour.reviews
     @tours = Tour.select_tours_by_category(@tour.category_id).except_id params[:id]
+    able_to_review_and_rating
   end
 
   def index
@@ -24,5 +24,12 @@ class ToursController < ApplicationController
     return if @tour
     flash[:danger] = t ".error_noti"
     redirect_to root_url
+  end
+
+  def able_to_review_and_rating
+    return unless logged_in?
+    @review = Review.new
+    @rating = @current_user.ratings.find_by tour_id: @tour.id
+    @rating ||= Rating.new
   end
 end

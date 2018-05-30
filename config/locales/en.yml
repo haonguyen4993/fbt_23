@@ -10,6 +10,9 @@ en:
     confirm: "Are you sure?"
     user_not_found: "User not found"
     please_log_in: "Please log in first"
+    thanks_for_rating: "Thanks for your rating!"
+    retry: "Something went wrong, please try again!"
+    rating_not_found: "Rating not found"
   layouts:
     application:
       tour: "Tour Booking"
@@ -101,6 +104,9 @@ en:
         quantity: "Number of booking"
         total: "Total"
         status: "Status"
+      booking:
+        view_tour: "View Tour"
+        write_review: "Write Review"
   dashboard:
     index:
       recent_bookings: "Recent Bookings"
@@ -121,6 +127,8 @@ en:
       content: "Content"
       rating: "Rating: %{rating}"
       also_like: "You may also like"
+      submit_rating: "Submit rating"
+      rating_me: "Rating me: "
     index:
       alltours: "All Tours"
       rating: "Rating: %{rating}"
@@ -130,6 +138,9 @@ en:
     detail:
       tour_detail: "Tour detail"
       book_tour: "Book tour"
+      start_day: "Start day:"
+      end_day: "End day:"
+      price: "Price:"
   categories:
     show:
       rating: "Rating: %{rating}"
@@ -150,7 +161,7 @@ en:
       nothing_to_show: "Nothing to show"
   time:
     formats:
-      date_month_year: "%d-%m-%y"
+      date_month_year: "%A, %d/%m/%y"
   reviews:
     form:
       leave_review: "Leave review"
