@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :categories, only: :show
   resources :reviews, only: :create
   resources :ratings, only: %i(create update)
+  resources :bookings, only: %i(new create)
 
   namespace :admin do
     root "dashboard#index"

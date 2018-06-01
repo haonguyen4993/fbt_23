@@ -340,6 +340,19 @@ a {
 #errors {
   margin-top: 10px;
   display: none;
+ }
+.booking-form {
+  th {
+    text-align: center;
+  }
+}
+
+.qTy {
+  width: 50px;
+}
+
+.tot {
+  width: 100px;
 }
 .symbol {
   display: inline-block;

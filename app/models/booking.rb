@@ -3,6 +3,7 @@ class Booking < ApplicationRecord
   belongs_to :description_detail
 
   validate :booking_expire, on: :update
+  validates :quantity, presence: true, numericality: {greater_than_or_equal_to: Settings.booking.min_quantity}
 
   scope :created_at_sort, ->{order created_at: :desc}
 

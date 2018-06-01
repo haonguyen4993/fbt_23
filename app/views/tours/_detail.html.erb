@@ -22,7 +22,7 @@
             <strong><%= t ".price" %> </strong>
             <%= number_to_currency description_detail.price %>
           </p>
-          <a class="btn btn-default" href="#" role="button"><%= t ".book_tour" %></a>
+          <%= link_to t(".book_tour"), new_booking_path(id: description_detail.id), class: "btn btn-default" %>
         </div>
       </div>
     </div>
