@@ -13,7 +13,9 @@
       <a href="#"><i class="glyphicon glyphicon-record"></i><%= t ".users" %></a>
     </li>
     <li>
-      <a href="#"><i class="glyphicon glyphicon-pencil"></i><%= t ".categories" %></a>
+      <%= link_to admin_categories_path do %>
+        <i class="glyphicon glyphicon-pencil"></i><%= t ".categories" %>
+      <% end %>
     </li>
     <li>
       <a href="#"><i class="glyphicon glyphicon-stats"></i><%= t ".statistics" %></a>

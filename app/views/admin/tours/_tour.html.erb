@@ -1,0 +1,9 @@
+<tr>
+  <td><%= tour.id %></td>
+  <td><%= tour.name %></td>
+  <td><%= l tour.created_at, format: :short %></td>
+  <td><%= tour.rating %></td>
+  <td>
+    <%= link_to t(".view"), "#", class: "btn btn-info" %>
+  </td>
+</tr>

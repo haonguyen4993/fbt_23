@@ -16,5 +16,6 @@ Rails.application.routes.draw do
   namespace :admin do
     root "dashboard#index"
     resources :bookings, only: %i(index show update)
+    resources :categories, except: %i(new edit update)
   end
 end
