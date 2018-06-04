@@ -68,6 +68,17 @@ en:
       signup_footer: "Sign up for more promotion"
       copyright_html: "Copyright&copy;2018"
   admin:
+    dashboard:
+      index:
+        recent_bookings: "Recently Bookings"
+        tour_name: "Tour name"
+        user_name: "User name"
+        booked_at: "Booked at"
+        start_day: "Start day"
+        price: "Price"
+        status: "Status"
+        action: "Action"
+        view: "View"
     share:
       header:
         admin_panel: "Admin Panel"
@@ -203,3 +214,5 @@ en:
     mail:
       hi: "Hi, %{name}"
       noti_message: "Your tour has been successfully booked."
+      response_mail_content: "Your booking has been %{status}"
+      have_a_nice_trip: "Have a nice trip!"

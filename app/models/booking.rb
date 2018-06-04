@@ -6,6 +6,7 @@ class Booking < ApplicationRecord
   validates :quantity, presence: true, numericality: {greater_than_or_equal_to: Settings.booking.min_quantity}
 
   scope :created_at_sort, ->{order created_at: :desc}
+  scope :select_by_status, ->(status){where status: status}
 
   enum status: {pending: 0, accepted: 1, rejected: 2}
 
