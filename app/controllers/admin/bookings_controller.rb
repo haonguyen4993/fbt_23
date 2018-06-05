@@ -12,7 +12,8 @@ module Admin
     def update
       if @booking.update_attributes booking_params
         flash[:success] = t "alert.booking_updated"
-        redirect_to admin_booking_url @booking
+        BookingMailer.booking_response(@booking).deliver_now unless @booking.pending?
+        redirect_to admin_booking_path @booking
       else
         handle_update_status if booking_params[:status].present?
       end
@@ -28,14 +29,14 @@ module Admin
       @booking = Booking.find_by id: params[:id]
       return if @booking
       flash[:danger] = t "alert.booking_not_found"
-      redirect_to admin_bookings_url
+      redirect_to admin_bookings_path
     end
 
     def handle_update_status
       @booking.errors.messages[:expire].each do |msg|
         flash[:danger] = msg
       end
-      redirect_to admin_booking_url @booking
+      redirect_to admin_booking_path @booking
     end
   end
 end
