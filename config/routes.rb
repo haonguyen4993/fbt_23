@@ -17,5 +17,8 @@ Rails.application.routes.draw do
     root "dashboard#index"
     resources :bookings, only: %i(index show update)
     resources :categories, except: %i(new edit update)
+    resources :tours do
+      resources :description_details, except: %i(index show)
+    end
   end
 end

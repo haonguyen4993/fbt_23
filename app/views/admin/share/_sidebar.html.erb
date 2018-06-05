@@ -11,7 +11,9 @@
       <% end %>
     </li>
     <li>
-      <a href="#"><i class="glyphicon glyphicon-tasks"></i><%= t ".tours" %></a>
+      <%= link_to admin_tours_path do%>
+        <i class="glyphicon glyphicon-list"></i><%= t ".tours" %>
+      <% end %>
     </li>
     <li>
       <a href="#"><i class="glyphicon glyphicon-record"></i><%= t ".users" %></a>

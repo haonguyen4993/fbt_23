@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180604025038) do
+ActiveRecord::Schema.define(version: 20180604143312) do
 
   create_table "bookings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "status",                           default: 0
@@ -49,10 +49,11 @@ ActiveRecord::Schema.define(version: 20180604025038) do
   create_table "description_details", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.float    "price",      limit: 24
     t.integer  "tour_id"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.datetime "start_day"
     t.datetime "end_day"
+    t.boolean  "deleted",               default: false
     t.index ["tour_id"], name: "index_description_details_on_tour_id", using: :btree
   end
 
@@ -89,12 +90,13 @@ ActiveRecord::Schema.define(version: 20180604025038) do
     t.string   "name"
     t.string   "short_description"
     t.integer  "category_id"
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
-    t.float    "rating",            limit: 24
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
+    t.float    "rating",            limit: 24,    default: 0.0
     t.string   "image"
     t.string   "itinerary"
     t.text     "content",           limit: 65535
+    t.boolean  "deleted",                         default: false
     t.index ["category_id"], name: "index_tours_on_category_id", using: :btree
   end
 
