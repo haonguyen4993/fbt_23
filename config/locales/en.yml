@@ -13,6 +13,11 @@ en:
     thanks_for_rating: "Thanks for your rating!"
     retry: "Something went wrong, please try again!"
     rating_not_found: "Rating not found"
+    category_not_found: "Category not found"
+    has_subcategories: "This category contains sub-category, can not delete!"
+    has_pending: "This category has pending booking, can not delete!"
+    delete_category_success: "Category has been deleted!"
+    are_you_sure: "Are you sure?"
   layouts:
     application:
       tour: "Tour Booking"
@@ -107,6 +112,19 @@ en:
       booking:
         view_tour: "View Tour"
         write_review: "Write Review"
+    categories:
+      index:
+        categories: "Categories"
+      show:
+        list_tours: "List tours"
+        create_new_tour: "Create New Tour"
+      form:
+        save_category: "Save Category"
+        name: "Category name"
+        description: "Description"
+        parent: "Parent category"
+      category:
+        delete: "Delete"
   dashboard:
     index:
       recent_bookings: "Recent Bookings"

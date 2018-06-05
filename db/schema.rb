@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180530035546) do
+ActiveRecord::Schema.define(version: 20180604025038) do
 
   create_table "bookings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "status",                           default: 0
@@ -28,8 +28,9 @@ ActiveRecord::Schema.define(version: 20180530035546) do
     t.string   "name"
     t.string   "description"
     t.integer  "parent_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.boolean  "deleted",     default: false
     t.index ["parent_id"], name: "index_categories_on_parent_id", using: :btree
   end
 

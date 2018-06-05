@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   before_action :load_categories
 
   def load_categories
-    @super_categories = Category.super
+    @super_categories = Category.available.super
   end
 
   def logged_in_user
