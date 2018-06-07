@@ -4,23 +4,17 @@ class RatingsController < ApplicationController
 
   def create
     @rating = Rating.new rating_params
-    if @rating.save
-      flash[:success] = t("alert.thanks_for_rating")
-      @tour.update_rating_average
-    else
-      flash[:danger] = t("alert.retry")
+    @tour.update_rating_average if @rating.save
+    respond_to do |format|
+      format.js{render "load_rating"}
     end
-    redirect_to tour_url params[:rating][:tour_id]
   end
 
   def update
-    if @rating.update_attributes rating_params
-      flash[:success] = t "alert.thanks_for_rating"
-      @tour.update_rating_average
-    else
-      flash[:danger] = t "alert.retry"
+    @tour.update_rating_average if @rating.update_attributes rating_params
+    respond_to do |format|
+      format.js{render "load_rating"}
     end
-    redirect_to tour_url params[:rating][:tour_id]
   end
 
   private

@@ -2,10 +2,7 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new review_params
     @review.save
-    respond_to do |f|
-      f.html{redirect_to tour_url params[:tour_id]}
-      f.js
-    end
+    respond_to :js
   end
 
   private

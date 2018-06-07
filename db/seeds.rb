@@ -18,17 +18,18 @@ Category.create!([
 ])
 
 Tour.delete_all
-10.times{
+10.times do |n|
+  url = File.open(Rails.root + "app/assets/images/tour-1.jpg")
   Tour.create!(
-    name: Faker::LeagueOfLegends.masteries,
-    rating: Faker::Number.between(1, 10),
+    name: Faker::Coffee.blend_name,
+    rating: 0,
     short_description: Faker::Lorem.sentence,
-    image: "",
+    image: url,
     itinerary: Faker::Lorem.sentence,
     content: Faker::Lorem.paragraphs,
     category_id: Faker::Number.between(1, 15)
   )
-}
+end
 
 DescriptionDetail.delete_all
 10.times{
@@ -87,6 +88,6 @@ Rating.delete_all
   Rating.create!(
     user_id: n+1,
     tour_id: Faker::Number.between(1, 10),
-    point: Faker::Number.between(1, 10)
+    point: Faker::Number.between(1, 5)
   )
 end

@@ -24,7 +24,7 @@ class Tour < ApplicationRecord
 
   def update_rating_average
     rating_average = ratings.any? ? ratings.average(:point).to_i : 0
-    self.update_attributes rating: rating_average
+    self.update_attribute :rating, rating_average
   end
 
   def has_pending_booking? id

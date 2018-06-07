@@ -258,6 +258,9 @@ en:
       view_tour: "View Tour"
       write_review: "Write Review"
       nothing_to_show: "Nothing to show"
+  ratings:
+    form:
+      thanks_for_rating: "Thanks for rating!"
   time:
     formats:
       date_month_year: "%A, %d/%m/%y"
