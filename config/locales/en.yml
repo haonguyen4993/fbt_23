@@ -154,6 +154,7 @@ en:
         tour_no: "Tour No #%{no}"
         content: "Content"
         rating: "Rating"
+        error_id_tour: "Tour does not exist"
       new:
         create_tour: "Create tour"
       form_tour:
@@ -191,6 +192,7 @@ en:
         make_sure: "Are you sure?"
       new:
         create_detail: "Create detail"
+        error_tour_id: "Tour does not exist"
       edit:
         edit_detail: "Edit detail"
         error_detail_id: "Detail does not exist"
@@ -198,6 +200,7 @@ en:
         detail_updated: "Detail Updated"
       create:
         create_success: "Created successfully"
+        error_tour_id: "Detail does not exist"
       destroy:
         error_delete: "Can not delete this detail"
         delete_success: "Deleted successfully"
@@ -282,7 +285,6 @@ en:
       end_day: "End day"
       quantity: "Number of people"
       book: "Book"
-
       total: "Total"
       danger_mess: "Tour detail does not exits"
     mail:
@@ -290,5 +292,5 @@ en:
       noti_message: "Your tour has been successfully booked."
       response_mail_content: "Your booking has been %{status}"
       have_a_nice_trip: "Have a nice trip!"
-  error_check_day: "Please enter the start date before the end date."
+  error_check_day: "Invalid date"
   error_image_size: "should be less than 5MB"
