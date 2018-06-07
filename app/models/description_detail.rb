@@ -12,10 +12,13 @@ class DescriptionDetail < ApplicationRecord
   scope :check_pending_booking, ->(id, status) do
     where "description_details.id = ? AND bookings.status = ?", id, status
   end
+  scope :hidden_expired_detail, ->{where "start_day > ?", Date.today}
 
   def check_day
-    if !start_day.nil? && !end_day.nil? && start_day > end_day
-      errors.add :error, I18n.t("error_check_day")
+    if start_day.present? && end_day.present?
+      if start_day > end_day || Date.today > start_day
+        errors.add :error, I18n.t("error_check_day")
+      end
     end
   end
 

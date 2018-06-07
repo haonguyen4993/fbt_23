@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
       redirect_to history_url
     else
       flash[:danger] = t ".failed"
-      redirect_to new_booking_url id: params[:booking][:description_detail_id]
+      redirect_to new_booking_url id: @booking.description_detail.id
     end
   end
 
@@ -25,7 +25,7 @@ class BookingsController < ApplicationController
   end
 
   def load_description_detail
-    @description_detail = DescriptionDetail.find_by id: params[:id]
+    @description_detail = DescriptionDetail.available.find_by id: params[:id]
     return if @description_detail
     flash[:danger] = t ".danger_mess"
     redirect_to root_url

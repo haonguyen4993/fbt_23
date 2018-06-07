@@ -8,7 +8,7 @@ module Admin
     end
 
     def show
-      @description_details = @tour.description_details.available
+      @description_details = @tour.description_details.available.hidden_expired_detail
     end
 
     def new
@@ -54,7 +54,7 @@ module Admin
     end
 
     def load_tour
-      @tour = Tour.find_by id: params[:id]
+      @tour = Tour.available.find_by id: params[:id]
       return if @tour
       flash[:danger] = t ".error_id_tour"
       redirect_to admin_tours_url

@@ -24,8 +24,8 @@
                   <td><%= number_to_currency @description_detail.price %></td>
                   <td><%= l @description_detail.start_day, format: :date_month_year %></td>
                   <td><%= l @description_detail.end_day, format: :date_month_year %></td>
-                  <td><%= f.text_field :quantity, id: "quantity", class: "qTy" %></td>
-                  <td><%= f.text_field :total, readonly: true, id: "total", class: "tot", value: "0.00" %></td>
+                  <td><%= f.text_field :quantity, id: "quantity", class: "qTy", value: Settings.booking.value %></td>
+                  <td id="total"><%= number_to_currency @description_detail.price %></td>
                 </tr>
               </tbody>
             </table>
