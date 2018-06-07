@@ -24,7 +24,7 @@ module Admin
       case
       when @category.childs.any?
         flash[:danger] = t "alert.has_subcategories"
-      when Category.booking_by_id_and_status(@category.id, "pending").any?
+      when Category.booking_by_id_and_status(@category.id, Booking.statuses[:pending]).any?
         flash[:danger] = t "alert.has_pending"
       when @category.tours.any?
         @category.toggle! :deleted
