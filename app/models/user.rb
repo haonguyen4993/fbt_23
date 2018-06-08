@@ -5,7 +5,8 @@ class User < ApplicationRecord
   has_many :likes
   has_many :ratings
 
-  has_secure_password
+  devise :database_authenticatable, :registerable, :recoverable,
+    :rememberable, :validatable
 
   enum role: {admin: 1, customer: 0}
 end
