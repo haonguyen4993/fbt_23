@@ -16,6 +16,8 @@ $brand-body-color: #e8e8e8;
 $brand-selection-color: #f9f6f0;
 $brand-overlay-color: #4c4a8a;
 $brand-bg-color: $brand-white;
+$light-blue: #d9edf7;
+$blue: #bce8f1;
 
 body {
   font-family: $font-primary;
@@ -27,6 +29,15 @@ body {
 }
 a {
   font-family: $font-primary;
+}
+
+.alert-notice {
+  color: $brand-overlay-color;
+  background-color: $light-blue;
+  border-color: $blue;
+}
+.alert ul {
+  list-style: none;
 }
 
 .btn-yellow {
