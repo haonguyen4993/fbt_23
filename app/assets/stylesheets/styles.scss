@@ -18,6 +18,9 @@ $brand-overlay-color: #4c4a8a;
 $brand-bg-color: $brand-white;
 $light-blue: #d9edf7;
 $blue: #bce8f1;
+$dark-red: #a94442;
+$light-pink: #ebccd1;
+$pink: #f2dede;
 
 body {
   font-family: $font-primary;
@@ -35,6 +38,11 @@ a {
   color: $brand-overlay-color;
   background-color: $light-blue;
   border-color: $blue;
+}
+.alert-alert {
+  color: $dark-red;
+  background-color: $light-pink;
+  border-color: $pink;
 }
 .alert ul {
   list-style: none;

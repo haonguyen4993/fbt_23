@@ -28,9 +28,9 @@ class ToursController < ApplicationController
   end
 
   def able_to_review_and_rating
-    return unless logged_in?
+    return unless user_signed_in?
     @review = Review.new
-    @rating = @current_user.ratings.find_by tour_id: @tour.id
+    @rating = current_user.ratings.find_by tour_id: @tour.id
     @rating ||= Rating.new
   end
 end

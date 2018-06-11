@@ -21,7 +21,7 @@
       <ul class="nav navbar-nav navbar-right">
         <% unless user_signed_in? %>
           <li><%= link_to t(".login"), new_user_session_path %></li>
-          <li><%= link_to t(".signup"), "#" %></li>
+          <li><%= link_to t(".signup"), new_user_registration_path %></li>
         <% else %>
           <li>
             <span class="greeting"><%= t ".greeting", name: current_user.name %></span></li>
