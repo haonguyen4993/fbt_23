@@ -4,7 +4,8 @@ module Admin
     before_action :load_categories, except: %i(index show destroy)
 
     def index
-      @tours = Tour.newest_tour.available.paginate page: params[:page], per_page: Settings.tour.per_page
+      @tours = @search_tours.result.newest_tour
+        .paginate page: params[:page], per_page: Settings.tour.per_page
     end
 
     def show

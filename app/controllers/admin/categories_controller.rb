@@ -14,10 +14,7 @@ module Admin
     def create
       @category = Category.new category_params
       @category.save
-      respond_to do |format|
-        format.html {redirect_to categories_path}
-        format.js
-      end
+      respond_to :js
     end
 
     def destroy

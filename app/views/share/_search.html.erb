@@ -1,8 +1,9 @@
 <div id="search" class="container-fluid">
   <div class="form-inline search-form">
     <div class="form-group">
-      <%= form_tag tours_path, method: :get do %>
-        <%= text_field_tag :search, params[:search], class: "form-control" %>
+      <%= search_form_for @search_tours do |f| %>
+        <%= f.search_field :name_cont, class: "form-control", placeholder: t(".tour_name") %>
+        <%= f.search_field :itinerary_cont, class: "form-control", placeholder: t(".desti") %>
         <%= submit_tag t(".search"), name: nil, class: "btn btn-default btn-search" %>
       <% end %>
     </div>

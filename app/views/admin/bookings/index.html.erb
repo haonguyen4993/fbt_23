@@ -4,6 +4,16 @@
       <div class="panel-heading">
         <div class="panel-title">
           <h3><%= t ".bookings_list" %></h3>
+          <div class="form-inline search-form">
+            <div class="form-group">
+              <%= search_form_for @search_bookings, url: admin_bookings_path, method: :get do |f| %>
+                <%= f.search_field :id_eq, class: "form-control", placeholder: t(".id") %>
+                <%= f.search_field :user_name_cont, class: "form-control", placeholder: t(".user_name") %>
+                <%= f.search_field :created_at_lteq, class: "form-control", placeholder: t(".booked_at") %>
+                <%= submit_tag t(".search"), name: nil, class: "btn btn-default btn-search" %>
+              <% end %>
+            </div>
+          </div>
         </div>
       </div>
       <div class="panel-body">
