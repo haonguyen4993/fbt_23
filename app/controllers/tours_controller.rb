@@ -2,7 +2,6 @@ class ToursController < ApplicationController
   before_action :load_tour, only: :show
 
   def show
-    store_location
     @description_details = @tour.description_details.available.hidden_expired_detail
     @review = Review.new
     @reviews = @tour.reviews
