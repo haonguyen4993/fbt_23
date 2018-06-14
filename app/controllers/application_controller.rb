@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
 
   before_action :store_user_location!, if: :storable_location?
   before_action :load_categories
+  before_action :create_ransack
 
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to root_path, alert: exception.message
@@ -20,14 +21,18 @@ class ApplicationController < ActionController::Base
   end
 
   def storable_location?
-    request.get?  && !devise_controller? && !request.xhr?
+    request.get? && !devise_controller? && !request.xhr?
   end
 
   def store_user_location!
     store_location_for(:user, request.fullpath)
   end
 
-  def after_sign_in_path_for(resource)
+  def after_sign_in_path_for resource
     resource.admin? ? admin_root_url : stored_location_for(resource)
+  end
+
+  def create_ransack
+    @search_tours = Tour.available.ransack params[:q]
   end
 end

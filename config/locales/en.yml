@@ -50,6 +50,8 @@ en:
       logout: "Log out"
     search:
       search: "Search"
+      tour_name: "Tour name"
+      desti: "Destination"
     error_messages_detail:
       error: "error"
   sessions:
@@ -107,6 +109,8 @@ en:
         action: "Action"
         view: "View"
         edit: "Edit"
+        search: "Search"
+        id: "Booking id"
       show:
         booking_details: "Booking Details"
         edit: "Edit"
@@ -148,6 +152,8 @@ en:
         itinerary: "Itinerary"
         image: "Image"
         action: "Action"
+        search: "Search"
+        id: "Tour id"
       show:
         tour_detail: "Tour details"
         create_detail: "Create a tour detail"

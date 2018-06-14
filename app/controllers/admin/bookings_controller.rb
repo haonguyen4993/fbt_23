@@ -3,7 +3,8 @@ module Admin
     before_action :load_booking, only: %i(show update)
 
     def index
-      @bookings = Booking.created_at_sort
+      @search_bookings = Booking.ransack params[:q]
+      @bookings = @search_bookings.result.created_at_sort
         .paginate page: params[:page], per_page: Settings.booking.per_page
     end
 
