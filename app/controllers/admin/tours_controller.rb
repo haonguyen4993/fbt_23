@@ -9,7 +9,7 @@ module Admin
     end
 
     def show
-      @description_details = @tour.description_details.available.hidden_expired_detail
+      @description_details = @tour.description_details.without_deleted
     end
 
     def new
@@ -41,8 +41,7 @@ module Admin
       if @tour.has_pending_booking? @tour.id
         flash[:danger] = t ".error_delete"
       else
-        @tour.delete_details
-        @tour.toggle! :deleted
+        @tour.destroy
         flash[:success] = t ".delete_success"
       end
       redirect_to admin_tours_url
@@ -55,7 +54,7 @@ module Admin
     end
 
     def load_tour
-      @tour = Tour.available.find_by id: params[:id]
+      @tour = Tour.without_deleted.find_by id: params[:id]
       return if @tour
       flash[:danger] = t ".error_id_tour"
       redirect_to admin_tours_url

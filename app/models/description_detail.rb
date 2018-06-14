@@ -8,7 +8,8 @@ class DescriptionDetail < ApplicationRecord
   validates :end_day, presence: true
   validate :check_day, on: [:update, :create]
 
-  scope :available, ->{where deleted: false}
+  acts_as_paranoid without_default_scope: true
+
   scope :check_pending_booking, ->(id, status) do
     where "description_details.id = ? AND bookings.status = ?", id, status
   end

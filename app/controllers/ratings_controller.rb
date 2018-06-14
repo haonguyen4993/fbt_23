@@ -27,7 +27,7 @@ class RatingsController < ApplicationController
   end
 
   def load_tour
-    @tour = Tour.find_by id: params[:rating][:tour_id]
+    @tour = Tour.without_deleted.find_by id: params[:rating][:tour_id]
     return if @tour
     flash[:danger] = t "alert.tour_not_found"
     redirect_to root_url

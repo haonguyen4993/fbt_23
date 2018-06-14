@@ -8,7 +8,7 @@ class CategoriesController < ApplicationController
   private
 
   def load_category
-    @category = Category.available.find_by id: params[:id]
+    @category = Category.find_by id: params[:id]
     return if @category
     flash[:danger] = t ".error_noti"
     redirect_to root_url

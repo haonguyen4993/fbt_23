@@ -33,10 +33,10 @@ module Admin
       when @description_detail.pending_booking?(@description_detail.id)
         flash[:danger] = t ".error_delete"
       when @description_detail.bookings.any?
-        @description_detail.toggle! :deleted
+        @description_detail.destroy
         flash[:success] = t ".delete_success"
       else
-        @description_detail.destroy
+        @description_detail.really_destroy!
         flash[:success] = t ".delete_success"
       end
       redirect_to admin_tour_url @description_detail.tour_id
@@ -49,14 +49,14 @@ module Admin
     end
 
     def load_description_detail
-      @description_detail = DescriptionDetail.available.hidden_expired_detail.find_by id: params[:id]
+      @description_detail = DescriptionDetail.without_deleted.find_by id: params[:id]
       return if @description_detail
       flash[:danger] = t ".error_detail_id"
       redirect_to admin_tours_url
     end
 
     def load_tour
-      @tour = Tour.available.hidden_expired_detail.find_by id: params[:tour_id]
+      @tour = Tour.without_deleted.find_by id: params[:tour_id]
       return if @tour
       flash[:danger] = t ".error_tour_id"
       redirect_to admin_tours_url

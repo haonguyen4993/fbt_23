@@ -25,7 +25,7 @@ class BookingsController < ApplicationController
   end
 
   def load_description_detail
-    @description_detail = DescriptionDetail.available.find_by id: params[:id]
+    @description_detail = DescriptionDetail.without_deleted.find_by id: params[:id]
     return if @description_detail
     flash[:danger] = t ".danger_mess"
     redirect_to root_url

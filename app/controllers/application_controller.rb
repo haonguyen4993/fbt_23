@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   end
 
   def load_categories
-    @super_categories = Category.available.super
+    @super_categories = Category.super
   end
 
   def correct_user
@@ -33,6 +33,6 @@ class ApplicationController < ActionController::Base
   end
 
   def create_ransack
-    @search_tours = Tour.available.ransack params[:q]
+    @search_tours = Tour.without_deleted.ransack params[:q]
   end
 end
