@@ -300,3 +300,25 @@ en:
       have_a_nice_trip: "Have a nice trip!"
   error_check_day: "Invalid date"
   error_image_size: "should be less than 5MB"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "can't be blank"
+            email:
+              blank: "can't be blank"
+              unique: "has already been taken"
+              invalid: "must be an email"
+            password:
+              blank: "can't be blank"
+              too_short: "is too short (minimum is %{count} characters)"
+              too_long: "is too long (minimum is %{count} characters)"
+            password_confirmation:
+              match: "doesn't match Password"
+        category:
+          attributes:
+            name:
+              blank: "can't be blank"
+              unique: "has already been taken"

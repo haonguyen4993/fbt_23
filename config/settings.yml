@@ -16,3 +16,6 @@ rating:
   max_point: 5
 description_details:
   limit_price: 1
+user:
+  min_pass_length: 6
+  max_pass_length: 128
