@@ -19,6 +19,7 @@ group :development, :test do
   gem "mysql2", ">= 0.3.18", "< 0.6.0"
   gem "rspec-rails"
   gem "factory_bot_rails"
+  gem "rails-controller-testing"
 end
 
 group :test do
